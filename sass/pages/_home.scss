@@ -1,0 +1,17 @@
+.section-about {
+  background-color: $color-gray-light-1;
+  padding: 25vh;
+  margin-top: -20vh;
+}
+.about {
+  &__info {
+    &-box {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    &-paragraph {
+      font-size: 1.6rem;
+    }
+  }
+}

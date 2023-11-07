@@ -1,0 +1,24 @@
+.row {
+  &:not(:last-child) {
+    margin-bottom: $vertical-gutter;
+  }
+
+  @for $x from 1 through 4 {
+    @for $y from 1 through 4 {
+      .col-#{$x}-of-#{$y} {
+        width: calc(
+          (((100% - #{$horizontal-gutter}* (#{$y} - 1)) / #{$y}) * #{$x}) +
+            ((#{$horizontal-gutter}* (#{$x} - 1)))
+        );
+      }
+    }
+  }
+
+  [class^="col"] {
+    float: left;
+    &:not(:last-child) {
+      margin-right: $horizontal-gutter;
+    }
+  }
+  @include clearfix;
+}

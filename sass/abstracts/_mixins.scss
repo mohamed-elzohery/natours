@@ -1,0 +1,13 @@
+@mixin reset-default-values {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
