@@ -11,3 +11,26 @@
     display: table;
   }
 }
+
+@mixin linear-gradient-background($imgSrc) {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-green-light, 0.8),
+      rgba($color-green-dark, 0.8)
+    ),
+    url($imgSrc);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin text-linear-gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba($color-green-light, 0.8),
+    rgba($color-green-dark, 0.8)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

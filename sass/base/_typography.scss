@@ -37,14 +37,8 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     color: transparent;
-    background-image: linear-gradient(
-      to right,
-      rgba($color-light-green, 0.8),
-      rgba($color-dark-green, 0.8)
-    );
+    @include text-linear-gradient;
     letter-spacing: 0.2rem;
-    -webkit-background-clip: text;
-    background-clip: text;
     transition: all 0.2s ease-out;
   }
 

@@ -1,6 +1,6 @@
 .section-about {
   background-color: $color-gray-light-1;
-  padding: 25vh;
+  padding: 25rem 0;
   margin-top: -20vh;
 }
 .about {
@@ -14,4 +14,21 @@
       font-size: 1.6rem;
     }
   }
+}
+.section-features {
+  padding: 20rem 0;
+  @include linear-gradient-background("../img/nat-4.jpg");
+  transform: skewY(-7deg);
+  margin-top: -12vh;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-tours {
+  padding: 25rem;
+  background-color: $color-gray-light-1;
+  margin-top: -12vh;
+  text-align: center;
 }

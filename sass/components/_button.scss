@@ -50,6 +50,14 @@
       background-color: $color-white;
     }
   }
+
+  &--green {
+    color: $color-white !important;
+    background-color: $color-medium-green;
+    &::after {
+      background-color: $color-medium-green;
+    }
+  }
   &-text {
     &:link,
     &:visited {

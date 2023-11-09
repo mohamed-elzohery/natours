@@ -1,0 +1,168 @@
+.card {
+  & {
+    height: 52rem;
+    position: relative;
+    perspective: 150rem;
+    background-color: transparent;
+  }
+  &__side {
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
+    position: absolute;
+    font-size: 2rem;
+    height: 100%;
+    border-radius: 0.3rem;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+
+    &--face {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      z-index: -2;
+      &-primary {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-green-light,
+          $color-green-dark
+        );
+      }
+      &-secondary {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &-tertiary {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--face {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__img {
+    height: 23rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+    &--primary {
+      background-image: url("../img/nat-5.jpg"),
+        linear-gradient(to bottom right, $color-green-light, $color-green-dark);
+    }
+
+    &--secondary {
+      background-image: url("../img/nat-5.jpg"),
+        linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+    }
+
+    &--tertiary {
+      background-image: url("../img/nat-5.jpg"),
+        linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: $color-white;
+    text-transform: uppercase;
+    width: 75%;
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    right: 2rem;
+    top: 12rem;
+
+    & > span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    &--primary {
+      span {
+        background: linear-gradient(
+          to bottom right,
+          rgba($color-green-light, 0.85),
+          rgba($color-green-dark, 85)
+        );
+      }
+    }
+    &--secondary {
+      span {
+        background: linear-gradient(
+          to bottom right,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 85)
+        );
+      }
+    }
+    &--tertiary {
+      span {
+        background: linear-gradient(
+          to bottom right,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 85)
+        );
+      }
+    }
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: auto auto 0;
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 3rem;
+      li {
+        padding: 1rem 0;
+
+        &:not(:last-child) {
+          border-bottom: 0.1rem solid #eee;
+        }
+      }
+    }
+  }
+
+  .cta {
+    transform: translateY(50%);
+    text-align: center;
+    color: $color-white;
+    &__only {
+      font-weight: bold;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    &__price {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+}
