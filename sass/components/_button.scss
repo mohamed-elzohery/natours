@@ -1,4 +1,5 @@
 .btn {
+  &:where(button),
   &:link,
   &:visited {
     position: relative;
@@ -9,6 +10,8 @@
     border-radius: 10rem;
     text-decoration: none;
     transition: all 0.2s;
+    cursor: pointer;
+    border: none;
   }
 
   &:hover {

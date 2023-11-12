@@ -1,0 +1,92 @@
+.form {
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &--radio {
+      display: inline-block;
+      width: 45%;
+      padding-left: 4rem;
+      label {
+        text-transform: capitalize;
+
+        cursor: pointer;
+        span {
+          display: block;
+          position: relative;
+          left: -4rem;
+          top: 3rem;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          border: 0.5rem solid $color-green-dark;
+        }
+
+        span::after {
+          position: absolute;
+          content: "";
+          width: 1.3rem;
+          height: 1.3rem;
+          background-color: $color-green-dark;
+          border-radius: 50%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: 0.3s;
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked + label > span::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 90%;
+    padding: 1.5rem 2rem;
+    background-color: rgba($color: $color-white, $alpha: 0.5);
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    border-radius: 3px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    &:focus {
+      box-shadow: 0 1rem 3rem rgba($color: $color-black, $alpha: 0.2);
+      outline: 0;
+      &:invalid {
+        border-color: $color-secondary-dark;
+      }
+      &:valid {
+        border-color: $color-green-dark;
+      }
+    }
+    &::placeholder {
+      text-transform: capitalize;
+      color: #777;
+    }
+  }
+  &__label {
+    color: #777;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    display: block;
+  }
+
+  &__input:placeholder-shown + &__label {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+}

@@ -32,7 +32,7 @@
         <a class="btn btn--white btn--animated" href="#">discover our tours</a>
       </div>
     </header>
-    <section id="about" class="section-about">
+    <section id="about" class="section-about text-center">
       <h2 class="heading-secondary mb-lg">
         exciting tours for adventurous people
       </h2>
@@ -253,6 +253,66 @@
           </div>
         </div>
         <a href="#" class="btn-text">Read all stories</a>
+      </div>
+    </section>
+    <section class="section-booking">
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <h2 class="heading-secondary mb-md">start booking nows</h2>
+            <form action="#" class="form">
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="form__input"
+                  id="name"
+                  name="name"
+                  placeholder="full name"
+                  required
+                />
+                <label for="name" class="form__label">full name</label>
+              </div>
+              <div class="form__group">
+                <input
+                  required
+                  placeholder="email address"
+                  type="text"
+                  class="form__input"
+                  id="email"
+                  name="email"
+                />
+                <label for="email" class="form__label">email address</label>
+              </div>
+              <div class="form__group">
+                <div class="form__group--radio">
+                  <input
+                    type="radio"
+                    name="tour-size"
+                    id="small"
+                    value="small"
+                  />
+                  <label for="small"
+                    ><span class="radio-btn"></span>small tour group</label
+                  >
+                </div>
+                <div class="form__group--radio">
+                  <input
+                    type="radio"
+                    name="tour-size"
+                    id="large"
+                    value="large"
+                  />
+                  <label for="large"
+                    ><span class="radio-btn"></span>large tour group</label
+                  >
+                </div>
+              </div>
+              <button class="btn btn--green btn--animated mt-md">
+                book now &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </body>
