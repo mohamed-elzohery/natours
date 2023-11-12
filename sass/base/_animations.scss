@@ -35,3 +35,19 @@
     opacity: 1;
   }
 }
+
+@keyframes bounceLeft {
+  0% {
+    transform: translate(-200rem, -50%);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(0.5rem, -50%);
+
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
