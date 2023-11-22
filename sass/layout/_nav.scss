@@ -2,12 +2,17 @@
   &__btn {
     position: fixed;
     right: 6rem;
+    top: 6rem;
     width: 7rem;
 
-    top: 6rem;
     height: 7rem;
 
     z-index: 1000;
+
+    @include respond(tablet-port) {
+      top: 3rem;
+      right: 3rem;
+    }
 
     &:hover .nav__dash {
       &::after {

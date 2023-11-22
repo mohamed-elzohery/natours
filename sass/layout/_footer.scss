@@ -18,6 +18,14 @@
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tablet-port) {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      max-width: 50rem;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -56,5 +64,12 @@
     padding-top: 2rem;
     width: 80%;
     float: right;
+    @include respond(tablet-port) {
+      float: none;
+      margin: 0 auto;
+      display: block;
+      max-width: 50rem;
+      text-align: center;
+    }
   }
 }
