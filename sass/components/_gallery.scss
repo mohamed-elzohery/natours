@@ -1,6 +1,10 @@
 .gallery {
   & {
     position: relative;
+
+    @include respond(tablet-port) {
+      height: 45rem;
+    }
   }
 
   &__img {
@@ -11,18 +15,33 @@
       box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.4);
       border-radius: 0.3rem;
 
+      @include respond(tablet-port) {
+        max-width: 40%;
+      }
       &--1 {
         top: -2rem;
         left: 0;
+        @include respond(tablet-port) {
+          top: 0.5rem;
+        }
       }
       &--2 {
         top: 2rem;
         right: 0;
+
+        @include respond(tablet-port) {
+          top: 0.5rem;
+        }
       }
 
       &--3 {
         top: 10rem;
         left: 20%;
+        @include respond(tablet-port) {
+          top: -0.5rem;
+          left: 30%;
+          transform: scale(1.05);
+        }
       }
 
       &:hover {

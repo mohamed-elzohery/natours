@@ -4,6 +4,18 @@
     position: relative;
     perspective: 150rem;
     background-color: transparent;
+
+    @include respond(tablet-port) {
+      max-width: 60rem;
+      margin: 0 auto;
+      height: auto;
+      border-radius: 0.3rem;
+    }
+
+    @include respond(phone) {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
   }
   &__side {
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
@@ -18,6 +30,12 @@
     transition: all 0.8s ease;
     backface-visibility: hidden;
 
+    @include respond(tablet-port) {
+      position: initial;
+      height: auto;
+      border-radius: 0;
+    }
+
     &--face {
       background-color: $color-white;
     }
@@ -25,6 +43,12 @@
     &--back {
       transform: rotateY(180deg);
       z-index: -2;
+      @include respond(tablet-port) {
+        transform: rotateY(0);
+        z-index: 1;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        margin-top: -6rem;
+      }
       &-primary {
         background-image: linear-gradient(
           to bottom right,
@@ -51,6 +75,10 @@
 
   &:hover &__side--face {
     transform: rotateY(-180deg);
+
+    @include respond(tablet-port) {
+      transform: rotateY(0);
+    }
   }
   &:hover &__side--back {
     transform: rotateY(0deg);
@@ -141,6 +169,10 @@
       font-size: 1.6rem;
       text-align: center;
       padding: 3rem;
+
+      @include respond(tablet-port) {
+        padding: 3rem 0 8rem;
+      }
       li {
         padding: 1rem 0;
 
@@ -155,14 +187,32 @@
     transform: translateY(50%);
     text-align: center;
     color: $color-white;
+    @include respond(tablet-port) {
+      transform: rotateY(0);
+      padding: 2rem 0 4rem;
+    }
     &__only {
       font-weight: bold;
       font-size: 1.4rem;
       text-transform: uppercase;
+
+      @include respond(tablet-port) {
+        margin-top: 3rem;
+      }
     }
     &__price {
       font-size: 6rem;
       font-weight: 100;
+
+      @include respond(tablet-port) {
+        transform: rotateY(0);
+        font-weight: 300;
+        font-size: 4rem;
+      }
+    }
+
+    @include respond(tablet-port) {
+      transform: translate(0);
     }
   }
 }

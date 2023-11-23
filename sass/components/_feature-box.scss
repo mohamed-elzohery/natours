@@ -8,6 +8,16 @@
     transition: transform 0.3s;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
   }
+
+  @include respond(tablet-port) {
+    max-width: 60rem !important;
+    margin: 0 auto;
+  }
+
+  @include respond(tablet-port) {
+    max-width: 50rem !important;
+    margin: 0 auto;
+  }
   //   transform: skewY(7deg);
 
   &:hover {

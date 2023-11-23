@@ -1,20 +1,40 @@
 .mb-sm {
   margin-bottom: 1.5rem !important;
+
+  @include respond(tablet-port) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .mb-md {
   margin-bottom: 3rem !important;
+
+  @include respond(tablet-port) {
+    margin-bottom: 2rem !important;
+  }
 }
 
 .mt-md {
   margin-top: 3rem !important;
+
+  @include respond(tablet-port) {
+    margin-top: 2rem !important;
+  }
 }
 .mb-lg {
   margin-bottom: 6rem !important;
+
+  @include respond(tablet-port) {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .mb-xl {
   margin-bottom: 6rem !important;
+
+  @include respond(tablet-port) {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .text-center {

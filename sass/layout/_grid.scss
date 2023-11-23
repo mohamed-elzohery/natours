@@ -5,6 +5,7 @@
     margin-bottom: $vertical-gutter;
     @include respond(tablet-port) {
       margin-bottom: $vertical-gutter-small;
+      margin-right: auto;
     }
   }
 
@@ -29,9 +30,12 @@
       margin-right: $horizontal-gutter;
 
       @include respond(tablet-port) {
-        margin-right: 0;
+        margin-right: auto;
         margin-bottom: $horizontal-gutter;
       }
+    }
+    @include respond(tablet-port) {
+      float: none;
     }
 
     @include respond(tablet-port) {

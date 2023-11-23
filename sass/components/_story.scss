@@ -11,6 +11,17 @@
     border-radius: 0.3rem;
   }
 
+  @include respond(tablet-port) {
+    max-width: 100%;
+    padding: 4rem 6rem 5rem;
+  }
+
+  @include respond(tablet-port) {
+    max-width: 90%;
+    transform: skewX(0deg);
+    padding: 2rem 4rem 3rem;
+  }
+
   &__container {
     padding: 15rem 0;
   }
@@ -35,6 +46,10 @@
 
   & > * {
     transform: skewX(10deg);
+
+    @include respond(tablet-port) {
+      transform: skewX(0deg);
+    }
   }
 
   &__shape {
