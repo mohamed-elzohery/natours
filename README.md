@@ -6,7 +6,7 @@
 <div align="center">
 
   <a href="https://mohamed-elzohery.github.io/natours/" target="_blank">
-    <img src="https://mohamed-elzohery.github.io/natours/img/logo-white.png" alt="Logo">
+    <img src="https://mohamed-elzohery.github.io/natours/img/logo-green-2x.png" alt="Logo">
   </a>
 
   <h3 align="center">natours</h3>
@@ -93,7 +93,6 @@ Project Link: [https://github.com/mohamed-elzohery/natours](https://github.com/m
 
 ## Acknowledgments
 
-- [CSS Tricks-Flexbox Cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [GitHub Pages](https://pages.github.com)
 - [Advanced CSS and Sass course](https://www.udemy.com/course/advanced-css-and-sass/)
 
